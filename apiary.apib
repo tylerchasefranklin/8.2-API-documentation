@@ -1,0 +1,125 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# Majestic Thai
+
+## Dishes Collection [/dishes]
+
+### List All Dishes [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "url": "/dishes",
+                "dishes": [
+                    {
+                        "item": "Spring Rolls",,
+                        "id": ,
+                        "description": "Crispy vegetarian deep-fried spring rolls served with Thai sweet & sour sauce.",
+                        "price": 4.95
+                    }, {
+                        "dish": "Satay Chicken",,
+                        "id": 1,
+                        "description": "Chicken on skewers marinated ins pecial Thai Seasoning and grilled to perfections: served with peanut sauce and cucumber salad",
+                        "price": 7.95
+                    }, {
+                        "dish": "Basil Duck",,
+                        "id": 2,
+                        "description": "Semi-crispy dusk stir-fried in spicy basil sauce with sweet basil, fresh chili, garlic, onion, green beans, and bell peppe",
+                        "price": 17.95
+                    }, {
+                        "dish": "Pad See-U",,
+                        "id": 2,
+                        "description": "Stir-fried broad noodle with egg, broccoli and carrot in delicious sweet-garlic sauce",
+                        "price": 10.95
+                    }, {
+                        "dish": "Tom-Yum_Goong",,
+                        "id": 3,
+                        "description": "Thai spicy shrip soup wiht lemon grass, lime juice, chili paste, cilantro, red onion and mushroom",
+                        "price": 12.95
+                    }, 
+                ]
+            }
+        ]
+
+## Dish Item [/dishes/{dishes_id}]
+        
+### List One Dish [GET]
+
++ Response 200 (application.json)
+        
+            
+        {
+            "url": "/dishes/3",
+            "dish": [
+                {
+                    "dish": "Tom-Yum_Goong",
+                    "id": 3,
+                    "description": "Thai spicy shrip soup wiht lemon grass, lime juice, chili paste, cilantro, red onion and mushroom",
+                    "price": 12.95
+                }, 
+            ]
+        }
+            
+
+
+## Orders Collection [/orders]
+
+### List All Orders [GET]
+
++ Response 200 (application.json)
+
+        [
+            {
+                "url": "orders,
+                "orders": [
+                    {
+                        "id": 1,
+                        "username": "Chase",
+                        "time": "12:42",
+                        "total": '25.85',
+                        "items_ordered": [
+                        "Tom-Yum_Goong",
+                        "Satay Chicken",
+                        "Spring Rolls"
+                        ],
+                    }, {
+                        "id": 2,
+                        "username": "Rees",
+                        "time": "5:41",
+                        "total": '28.90',
+                        "items_ordered": [
+                        "Basil Duck",
+                        "Pad See-U"
+                        ],
+                    },
+                ]
+            }
+        ]
+
+
+## Order Item [/orders/2]
+
+### List One Order [GET]
+
++ Response 200 (application.json)
+
+        [
+            {
+                "url": "/orders/1",
+                "order": [
+                    {
+                         "id": 2,
+                        "username": "Rees",
+                        "time": "5:41",
+                        "total": '28.90',
+                        "items_ordered": [
+                        "Basil Duck",
+                        "Pad See-U"
+                        ],
+                    }
+                       
+                ]
+            }
+        ]
